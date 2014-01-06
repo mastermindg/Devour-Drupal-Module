@@ -22,22 +22,22 @@ Here is the roadmap for development for Devour:
 ## Phase 1: Create basic functional product
 1. Database table for storing system settings (adding sites)
 2. What data I need to extract data:
-	a. Site name
-	b. User specific data
+        --* Site name
+	--* User specific data
 3. User table for storing user settings (perferences)
 	Array of data in table for now
 4. User interface for preferences
-	a. Setup Fields added to devour_specific tables
-	b. Create initial form												
-	c. Block(s) for outputting the data
+	--* Setup Fields added to devour_specific tables
+	--* Create initial form												
+	--* Block(s) for outputting the data
 		
 ## Phase 2: Refine install
 1. Database table for accessing content (caching)
 2. Mapping functionality to tie into the user interface
-   Allow for more speicifc user location data (street)
+   --* Allow for more speicifc user location data (street)
 3. Allow to add additional profiles from settings page
 4. Add validation
 5. Create custom user page for preferred content
-	a. Put preferred content in select boxes
+	--* Put preferred content in select boxes
 		 	
 ## Phase 3: Add advanced functionality to detect methods on a site automatically
