@@ -1,0 +1,11 @@
+name = Devour
+description = "Provides an extensible workflow to establish connections to external sites and extract data according to user input."
+package = Awesome
+core = 7.x
+
+dependencies[] = geolocation
+
+files[] = devour.module
+files[] = devour.install
+files[] = includes/settings.inc
+files[] = includes/profiles.inc
