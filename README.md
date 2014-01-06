@@ -1,4 +1,4 @@
 Devour-Drupal-Module
 ====================
 
-Devour implements automation testing in Drupal 7 using Selenium and php-webdriver
+Devour turns Drupal7 into an automation system that can automate processes on ANY site, not just Drupal itself. It uses Selenium and PHP-WebDriver for tests.
