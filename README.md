@@ -22,8 +22,8 @@ Here is the roadmap for development for Devour:
 ## Phase 1: Create basic functional product
 1. Database table for storing system settings (adding sites)
 2. What data I need to extract data:
-* Site name
-* User specific data
+-- Site name
+-- User specific data
 3. User table for storing user settings (perferences)
 * Array of data in table for now
 4. User interface for preferences
