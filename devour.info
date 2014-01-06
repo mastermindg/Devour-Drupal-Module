@@ -3,7 +3,7 @@ description = "Provides an extensible workflow to establish connections to exter
 package = Awesome
 core = 7.x
 
-dependencies[] = geolocation
+;dependencies[] = geolocation
 
 files[] = devour.module
 files[] = devour.install
