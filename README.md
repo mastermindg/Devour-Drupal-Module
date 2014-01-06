@@ -21,7 +21,7 @@ Error handling and logging is a big part of Devour as there are so many possible
 
 Here is the roadmap for development for Devour:
 
-## Phase 1: Create basic functional product
+## Phase 1: Create basic functionality
 1. Database table for storing system settings (adding sites)
 2. What data I need to extract data - (Site name,User specific data)
 3. Table for storing user settings (perferences) Array of data in table for now
