@@ -1,0 +1,105 @@
+<?php
+
+
+/**
+ * @file
+ * Retrieves user-specific content from external sites and displaying this content in forms
+ * for users to interact with
+ * TODO
+ *   Add the ability to retrieve from ANY form on ANY site in one config (user section)
+ */
+
+/**
+ * Module Variables
+ */
+define('DEVOUR_SITE_PATH', 'sites/all/modules/custom/devour/includes/user/sites/');
+
+
+
+/**
+ * Implements hook_menu().
+ */
+function devour_menu() {
+  $items['admin/config/services/devour'] = array(
+    'title' => 'Devour Settings',
+    'description' => t('Configure settings for scraping external content'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('devour_settings_form'),
+    'access arguments' => array('administer devour'),
+    'file' => 'includes/admin/settings.inc',
+  );
+  $items['admin/config/services/devour/settings'] = array(
+    'title' => 'General Settings',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10
+  );
+  $items['admin/config/services/devour/profiles'] = array(
+    'title' => 'Site Profiles',
+    'type' => MENU_LOCAL_TASK,
+    'description' => t('Configure profiles for scraping external content'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('devour_profiles_form'),
+    'access arguments' => array('administer devour'),
+    'file' => 'includes/admin/profiles.inc',
+  );
+  $items['admin/config/services/devour/users'] = array(
+    'title' => 'Site Users',
+    'type' => MENU_LOCAL_TASK,
+    'description' => t('List of a Devour Users'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('devour_users_form'),
+    'access arguments' => array('administer devour'),
+    'file' => 'includes/admin/users.inc',
+  );
+  $items['devour/setup'] = array(
+    'title' => 'Devour Setup',
+    'description' => t('Setup Devour for You'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('devour_wizard'),
+    'access arguments' => array('access devour'),
+    'file' => 'includes/user/setup.inc',
+  );
+  $items['devour/test'] = array(
+    'title' => 'Devour Test',
+    //'description' => t('Setup Devour for You'),
+    'page callback' => '_devour_testing',
+    //'page arguments' => array(1),
+    'access arguments' => array('access devour'),
+    'file' => 'test.inc',
+  );
+  $items['devour/test2'] = array(
+    'title' => 'Devour Test2',
+    //'description' => t('Setup Devour for You'),
+    'page callback' => '_devour_testing2',
+    //'page arguments' => array(1),
+    'access arguments' => array('access devour'),
+    'file' => 'test2.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function devour_permission() {
+  return array(
+    'administer devour' => array(
+      'title' => t('Administer Devour'),
+      'description' => t('Perform administration tasks on devour.'),
+    ),
+    'access devour' => array(
+      'title' => t('Access Devour'),
+      'description' => t('Access user pages including setup.'),
+    ),
+  );
+}
+
+
+
+/**
+ * Database query - automate querying table
+ */
+function _devour_db($field) {
+	global $dtable;
+	return "SELECT $field FROM $dtable";
+}
