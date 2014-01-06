@@ -2,7 +2,7 @@ Devour - a Drupal Module for data liberation
 ============================================
 
 ##  DESCRIPTION
-Devour provides an extensible workflow to establish connections to external sites and extract data according to user input. 
+Devour provides an extensible workflow to establish connections to external sites and extract data according to user input. Devour prefers geodata that is referencable and comparible as this is most easily relatable.
 
 It is extensible in that site configurations can be easily added using Drupal hooks. This allows much simpler (and in-turn much quicker) deployments to various sites. 
 
