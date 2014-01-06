@@ -43,3 +43,11 @@ Here is the roadmap for development for Devour:
 	--* Put preferred content in select boxes
 		 	
 ## Phase 3: Add advanced functionality to detect methods on a site automatically
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
