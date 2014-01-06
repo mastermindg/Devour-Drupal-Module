@@ -67,14 +67,6 @@ function devour_menu() {
     'access arguments' => array('access devour'),
     'file' => 'test.inc',
   );
-  $items['devour/test2'] = array(
-    'title' => 'Devour Test2',
-    //'description' => t('Setup Devour for You'),
-    'page callback' => '_devour_testing2',
-    //'page arguments' => array(1),
-    'access arguments' => array('access devour'),
-    'file' => 'test2.inc',
-  );
   return $items;
 }
 
